@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.bo.thread.TDownload&apos; to &apos;TDownloader&apos;&#x0D;&#x0A;- Original project: &apos;0101Thread_study01&apos;&#x0D;&#x0A;- Original element: &apos;com.bo.thread.TDownload&apos;&#x0D;&#x0A;- Renamed element: &apos;com.bo.thread.TDownloader&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;TDownload&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.bo.thread{TDownload.java[TDownload" matchStrategy="1" name="TDownloader" qualified="false" references="true" similarDeclarations="false" stamp="1577972721404" textual="false" version="1.0"/>
+</session>

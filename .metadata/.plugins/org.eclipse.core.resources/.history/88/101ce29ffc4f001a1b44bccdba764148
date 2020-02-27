@@ -1,0 +1,14 @@
+package com.bo.chat05;
+
+/**
+ * 工具类
+ * 
+ * @author 33136
+ *
+ */
+
+public class Utils {
+	/**
+	 * 释放资源
+	 */
+}

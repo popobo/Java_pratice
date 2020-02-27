@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;libs&apos;&#x0D;&#x0A;- Original project: &apos;1229_IO_study04&apos;&#x0D;&#x0A;- Destination element: &apos;libs&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     commons-io-2.6-sources.jar&#x0D;&#x0A;     commons-io-2.6.jar" description="Copy files" element1="lib/commons-io-2.6-sources.jar" element2="lib/commons-io-2.6.jar" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1577972676123" target="/0101Thread_study01/libs" units="0" version="1.0"/>
+</session>

@@ -1,0 +1,84 @@
+package com.bo.chat05;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.Socket;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+/**
+ * 在线聊天室:服务器
+ * 
+ * @author 33136
+ *
+ */
+
+
+public class Chat {
+	private static CopyOnWriteArrayList<Channel> all = new CopyOnWriteArrayList<Channel>();
+	//一个客户代表一个Channel
+	static class Channel implements Runnable{
+		private DataInputStream dis;
+		private DataOutputStream dos;
+		private Socket client;
+		private boolean isRunning;
+		private String name;
+		public Channel(Socket client) {
+			this.client = client;
+			try {
+				dos = new DataOutputStream(client.getOutputStream());
+				dis = new DataInputStream(client.getInputStream());
+				isRunning = true;
+				
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+ 		}
+		
+		//接受消息
+		private String receive() {
+			String msg = "";
+			try {
+				msg = dis.readUTF();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return msg;
+		}
+		
+		//发送消息
+		private void send(String msg) {
+			try {
+				dos.writeUTF(msg);
+				dos.flush();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		/**
+		 * 群聊：获取自己的消息，发给其他人
+		 * 私聊：约定数据格式：@xxx:msg
+		 * 
+		 */
+		private void sendOthers(String msg, boolean isSys) {
+			boolean isPrivate = msg.startsWith("@");
+			if (isPrivate) {
+				int idx = msg.indexOf(":");
+				//获取目标和数据
+				String targetName = msg.substring(1, idx);
+			}
+		}
+		
+		
+		//释放资源
+		private void release() {
+			this.isRunning = false;
+			Utils.close(dis, dos, client);
+			//退出
+			all.remove(this);
+			
+		}
+	}
+}

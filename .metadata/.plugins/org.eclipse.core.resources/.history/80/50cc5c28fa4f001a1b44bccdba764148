@@ -1,0 +1,13 @@
+package com.bo.chat05;
+
+/**
+ * 使用线程封装
+ * 1、发送消息
+ * 
+ * @author 33136
+ *
+ */
+
+public class Receive {
+
+}

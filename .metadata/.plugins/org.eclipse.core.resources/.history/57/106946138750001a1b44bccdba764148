@@ -1,0 +1,13 @@
+package com.bo.chat05;
+
+/**
+ * 在线聊天室
+ * 目标：私聊
+ * 
+ * @author 33136
+ *
+ */
+
+public class Client {
+
+}

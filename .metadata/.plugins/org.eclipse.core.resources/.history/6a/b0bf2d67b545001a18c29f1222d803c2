@@ -1,0 +1,13 @@
+package com.bo.net;
+
+/**
+ * 接收端基本流程:
+ * Address already in use:Can not bind 同一个协议下端口不允许冲突
+ *
+ * @author 33136
+ *
+ */
+
+public class UdpServer {
+
+}

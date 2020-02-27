@@ -1,0 +1,68 @@
+package com.bo.chat05;
+
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.Socket;
+
+/**
+ *  * 使用多线程封装:接收端
+ * 1、发送消息
+ * 2、从控制台获取消息
+ * 3、释放资源
+ * 4、重写run
+ * 
+ * @author 33136
+ *
+ */
+
+public class Send implements new Runnable() {
+	public void run() {
+		
+	}
+}{
+	private BufferedReader console;
+	private DataOutputStream dos;
+	private Socket client;
+	private String name;
+	private boolean isRunning;
+	public Send(Socket client, String name) {
+		this.client = client;
+		this.name = name;
+		this.isRunning = true;
+		try {
+			dos = new DataOutputStream(client.getOutputStream());
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	private String getStrFromConsole(){
+		try {
+			return console.readLine();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return "";
+	}
+	
+	private void send(String msg) {
+		try {
+			dos.writeUTF(msg);
+			dos.flush();
+		} catch (IOException e) {
+			System.out.println("e");
+			System.out.println("===3===");
+			e.printStackTrace();
+			release();
+		}
+	}
+	
+	//释放资源
+	private void release() {
+		this.isRunning = false;
+		Utils.close(dos, client);
+	}
+}

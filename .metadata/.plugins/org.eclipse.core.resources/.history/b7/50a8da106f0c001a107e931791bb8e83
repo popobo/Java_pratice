@@ -1,0 +1,13 @@
+package com.bo.io;
+
+import java.io.File;
+
+public class BufferedTest01 {
+	
+	public static void test1()
+	{
+		//1、创建源
+		File srcFile = new File("abc.txt");
+		//2、选择流
+	}
+}

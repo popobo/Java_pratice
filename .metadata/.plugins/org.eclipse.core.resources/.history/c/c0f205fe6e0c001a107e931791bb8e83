@@ -1,0 +1,12 @@
+package com.bo.io;
+
+import java.io.File;
+
+public class BufferedTest01 {
+	
+	public static void test1()
+	{
+		//1¡¢´´½¨Ô´
+		File srcFile = new File("abc.txt");
+	}
+}
