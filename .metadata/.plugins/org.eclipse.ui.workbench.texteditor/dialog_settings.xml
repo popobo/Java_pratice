@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Web12306"/>
+		<item key="selection" value="responseInfo"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="content"/>
+			<item value="respondInfo"/>
+			<item value="Person"/>
+			<item value="PersonHandler"/>
+			<item value="Enity"/>
 			<item value="Cinema"/>
 			<item value="Cuntomer"/>
 			<item value="Cuntomer2"/>
@@ -18,13 +23,11 @@
 			<item value="Web12306"/>
 			<item value="TDownloader"/>
 			<item value="collapsing"/>
-			<item value="target"/>
-			<item value="newNode2"/>
-			<item value="Node&lt;K,V&gt;[]"/>
-			<item value="Node&lt;K,V&gt;"/>
-			<item value="Node&lt;K, V&gt;["/>
 		</list>
 		<list key="replacehistory">
+			<item value="responseInfo"/>
+			<item value="WebHandler"/>
+			<item value="Entity"/>
 			<item value="Web12306"/>
 			<item value="Passenger"/>
 			<item value="Cinema2"/>
@@ -37,9 +40,6 @@
 			<item value="BlockSleep01"/>
 			<item value="CDownloader"/>
 			<item value="C"/>
-			<item value="newNode3"/>
-			<item value="Node3&lt;K, V&gt;"/>
-			<item value="Node3"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
